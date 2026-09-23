@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinemato — Brand Identity & Wireframe Architecture</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    /* Custom scrollbar for dark surfaces */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0d111a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #242e42;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+  </style>
+</head>
+<body class="bg-[#090D16] text-[#E2E8F0] min-h-screen antialiased flex flex-col">
+
+  <!-- Top Global Cinemato Header -->
+  <header class="border-b border-[#1E293B] bg-[#0E1524]/90 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <!-- Logo Emblem -->
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-red-600 flex items-center justify-center shadow-lg shadow-amber-500/20 ring-1 ring-amber-400/40">
+          <svg class="w-6 h-6 text-[#090D16]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v12h16V6H4zm2 2h3v3H6V8zm5 0h3v3h-3V8zm5 0h3v3h-3V8zM6 13h3v3H6v-3zm5 0h3v3h-3v-3zm5 0h3v3h-3v-3z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="text-xl font-extrabold tracking-tight text-white font-display">CINEMATO</span>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Master Blueprint</span>
+          </div>
+          <p class="text-xs text-slate-400">Cinema Advertising Marketplace Ecosystem</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs (Role & Mode Switcher) -->
+      <nav class="flex items-center space-x-1 bg-[#151D2E] p-1 rounded-xl border border-[#23304B]">
+        <button onclick="switchTab('branding')" id="tab-btn-branding" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all duration-150 bg-amber-500 text-slate-950 shadow">
+          🎨 Brand & Logo
+        </button>
+        <button onclick="switchTab('brand-portal')" id="tab-btn-brand-portal" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all duration-150">
+          🏢 Brand / Advertiser
+        </button>
+        <button onclick="switchTab('cinema-portal')" id="tab-btn-cinema-portal" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all duration-150">
+          🍿 Cinema Hall Owner
+        </button>
+        <button onclick="switchTab('admin-portal')" id="tab-btn-admin-portal" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all duration-150">
+          ⚡ Super Admin
+        </button>
+        <button onclick="switchTab('landing-wireframe')" id="tab-btn-landing-wireframe" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all duration-150">
+          🌐 Public Landing
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 1: BRAND IDENTITY & LOGO CONCEPT -->
+    <!-- ========================================================================= -->
+    <div id="tab-branding" class="tab-content space-y-8">
+      
+      <!-- Banner Introduction -->
+      <div class="bg-gradient-to-r from-amber-500/10 via-slate-900 to-red-500/10 border border-amber-500/30 rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+        <div class="max-w-3xl">
+          <span class="text-xs uppercase tracking-widest font-bold text-amber-400">Cinemato Brand Bible</span>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1 font-display tracking-tight">The Brand Identity of Cinemato</h1>
+          <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
+            Positioned at the intersection of <strong class="text-amber-400">Cinema Showmanship</strong> and <strong class="text-white">B2B AdTech Precision</strong>. Cinemato empowers local and national brands to dominate captive, high-attention movie audiences with transparent rates and verifiable proof-of-work.
+          </p>
+        </div>
+      </div>
+
+      <!-- Core Brand Pillars & Taglines -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-[#0E1524] border border-[#1E293B] rounded-2xl p-6 hover:border-amber-500/40 transition">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-lg mb-4">01</div>
+          <h3 class="text-lg font-bold text-white mb-2">Selected Taglines</h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="p-2.5 rounded-lg bg-[#151D2E] border border-amber-500/20 font-medium text-amber-300">
+              ⭐ "Where Brands Meet the Big Screen."
+            </li>
+            <li class="p-2.5 rounded-lg bg-[#151D2E] border border-slate-700/50">
+              "Unskippable Offline Advertising, Simplified."
+            </li>
+            <li class="p-2.5 rounded-lg bg-[#151D2E] border border-slate-700/50">
+              "Put Your Brand Under the Spotlight."
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0E1524] border border-[#1E293B] rounded-2xl p-6 hover:border-amber-500/40 transition">
+          <div class="w-10 h-10 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-lg mb-4">02</div>
+          <h3 class="text-lg font-bold text-white mb-2">Brand Archetype & Voice</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong class="text-white">The Magician + The Ruler:</strong> Combining the excitement, glamour, and sensory richness of cinema with dependable, audit-proof business certainty.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-[11px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Captive Attention</span>
+            <span class="text-[11px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Zero Ad-Blockers</span>
+            <span class="text-[11px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">100% Verified Proof</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0E1524] border border-[#1E293B] rounded-2xl p-6 hover:border-amber-500/40 transition">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-4">03</div>
+          <h3 class="text-lg font-bold text-white mb-2">Value Equation</h3>
+          <div class="space-y-2 text-xs">
+            <div class="flex justify-between py-1 border-b border-slate-800">
+              <span class="text-slate-400">For Cinema Halls:</span>
+              <span class="text-emerald-400 font-semibold">+35% Non-ticket Revenue</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-slate-800">
+              <span class="text-slate-400">For Brand Advertisers:</span>
+              <span class="text-amber-400 font-semibold">90%+ Recall Rate</span>
+            </div>
+            <div class="flex justify-between py-1">
+              <span class="text-slate-400">Platform Cut:</span>
+              <span class="text-white font-semibold">10% - 15% Escrow Commission</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color Palette System -->
+      <div class="bg-[#0E1524] border border-[#1E293B] rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-1 font-display">Official Color System</h2>
+        <p class="text-xs text-slate-400 mb-6">Designed specifically for dark cinema aesthetics with glowing, high-contrast highlights.</p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <!-- Swatch 1 -->
+          <div class="rounded-xl overflow-hidden border border-slate-800 bg-[#151D2E]">
+            <div class="h-24 bg-[#090D16] flex items-end p-2">
+              <span class="text-[11px] font-mono text-slate-400">#090D16</span>
+            </div>
+            <div class="p-3">
+              <p class="text-xs font-bold text-white">Velvet Midnight</p>
+              <p class="text-[10px] text-slate-400">Base Canvas</p>
+            </div>
+          </div>
+
+          <!-- Swatch 2 -->
+          <div class="rounded-xl overflow-hidden border border-slate-800 bg-[#151D2E]">
+            <div class="h-24 bg-[#0E1524] flex items-end p-2">
+              <span class="text-[11px] font-mono text-slate-400">#0E1524</span>
+            </div>
+            <div class="p-3">
+              <p class="text-xs font-bold text-white">Projector Slate</p>
+              <p class="text-[10px] text-slate-400">Card & Containers</p>
+            </div>
+          </div>
+
+          <!-- Swatch 3 -->
+          <div class="rounded-xl overflow-hidden border border-slate-800 bg-[#151D2E]">
+            <div class="h-24 bg-[#FFB800] flex items-end p-2 text-slate-950 font-bold">
+              <span class="text-[11px] font-mono">#FFB800</span>
+            </div>
+            <div class="p-3">
+              <p class="text-xs font-bold text-white">Popcorn Gold</p>
+              <p class="text-[10px] text-amber-400 font-medium">Primary Accent / CTAs</p>
+            </div>
+          </div>
+
+          <!-- Swatch 4 -->
+          <div class="rounded-xl overflow-hidden border border-slate-800 bg-[#151D2E]">
+            <div class="h-24 bg-[#E50914] flex items-end p-2 text-white font-bold">
+              <span class="text-[11px] font-mono">#E50914</span>
+            </div>
+            <div class="p-3">
+              <p class="text-xs font-bold text-white">Curtain Crimson</p>
+              <p class="text-[10px] text-red-400 font-medium">Cinema Drama / Alert</p>
+            </div>
+          </div>
+
+          <!-- Swatch 5 -->
+          <div class="rounded-xl overflow-hidden border border-slate-800 bg-[#151D2E]">
+            <div class="h-24 bg-[#10B981] flex items-end p-2 text-slate-950 font-bold">
+              <span class="text-[11px] font-mono">#10B981</span>
+            </div>
+            <div class="p-3">
+              <p class="text-xs font-bold text-white">Box Office Green</p>
+              <p class="text-[10px] text-emerald-400 font-medium">Payouts & Verification</p>
+            </div>
+          </div>
+
+          <!-- Swatch 6 -->
+          <div class="rounded-xl overflow-hidden border border-slate-800 bg-[#151D2E]">
+            <div class="h-24 bg-[#F8FAFC] flex items-end p-2 text-slate-950 font-bold">
+              <span class="text-[11px] font-mono">#F8FAFC</span>
+            </div>
+            <div class="p-3">
+              <p class="text-xs font-bold text-white">Silver Screen</p>
+              <p class="text-[10px] text-slate-400">Headings & Contrast</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo Direction Concepts -->
+      <div class="bg-[#0E1524] border border-[#1E293B] rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-2 font-display">Logo Design Concepts for Cinemato</h2>
+        <p class="text-xs text-slate-400 mb-6">Explore the three distinctive visual identity directions created for the platform.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Logo Option 1 -->
+          <div class="p-6 rounded-2xl bg-[#121A2C] border-2 border-amber-500/40 relative flex flex-col items-center text-center">
+            <span class="absolute top-3 right-3 text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full">Recommended</span>
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-500 via-amber-400 to-yellow-200 flex items-center justify-center shadow-xl shadow-amber-500/20 mb-4 ring-4 ring-amber-500/20">
+              <svg class="w-10 h-10 text-slate-950" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-13v10l8-5-8-5z"/>
+              </svg>
+            </div>
+            <h4 class="text-base font-bold text-white font-display">Concept A: The Golden Projector</h4>
+            <p class="text-xs text-slate-400 mt-2">A sleek play/projection aperture integrated into the letter 'C', radiating an expanding light cone that represents high-impact brand exposure.</p>
+          </div>
+
+          <!-- Logo Option 2 -->
+          <div class="p-6 rounded-2xl bg-[#121A2C] border border-slate-800 hover:border-slate-700 flex flex-col items-center text-center">
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-red-600 via-rose-500 to-amber-500 flex items-center justify-center shadow-xl shadow-red-500/20 mb-4">
+              <svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+              </svg>
+            </div>
+            <h4 class="text-base font-bold text-white font-display">Concept B: The Slate & Clapper</h4>
+            <p class="text-xs text-slate-400 mt-2">A modern geometric clapperboard fused with commercial growth bars, emphasizing that every cinema campaign drives measurable sales conversions.</p>
+          </div>
+
+          <!-- Logo Option 3 -->
+          <div class="p-6 rounded-2xl bg-[#121A2C] border border-slate-800 hover:border-slate-700 flex flex-col items-center text-center">
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-400 via-orange-500 to-amber-600 flex items-center justify-center shadow-xl shadow-amber-500/20 mb-4">
+              <svg class="w-10 h-10 text-slate-950" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm-4 8h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4h-4V7h4v2zM6 17H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V7h2v2zm14-5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/>
+              </svg>
+            </div>
+            <h4 class="text-base font-bold text-white font-display">Concept C: The Ticket & Tub Monogram</h4>
+            <p class="text-xs text-slate-400 mt-2">A minimal ticket stub geometry that subtly outlines a classic cinema popcorn tub, celebrating ambient offline concession advertising.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventory Services Matrix -->
+      <div class="bg-[#0E1524] border border-[#1E293B] rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-2 font-display">The Cinema Advertising Inventory Menu</h2>
+        <p class="text-xs text-slate-400 mb-6">The diverse advertising assets Cinema Owners can activate, price, and sell through Cinemato.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-xl bg-[#151D2E] border border-slate-800">
+            <span class="text-2xl mb-2 block">🎬</span>
+            <h4 class="text-sm font-bold text-white">On-Screen Commercials</h4>
+            <p class="text-xs text-slate-400 mt-1">Pre-show reels & high-recall 30s Interval Gold Spots before lights turn back on.</p>
+            <div class="mt-3 text-[11px] text-amber-400 font-semibold">Pricing: Per 10-sec slot / week</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#151D2E] border border-slate-800">
+            <span class="text-2xl mb-2 block">🍿</span>
+            <h4 class="text-sm font-bold text-white">Popcorn Bucket Sleeves</h4>
+            <p class="text-xs text-slate-400 mt-1">Custom full-wrap printed buckets held in viewers' hands for an average of 120 minutes.</p>
+            <div class="mt-3 text-[11px] text-amber-400 font-semibold">Pricing: Per 1,000 tubs printed</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#151D2E] border border-slate-800">
+            <span class="text-2xl mb-2 block">🥤</span>
+            <h4 class="text-sm font-bold text-white">Beverage Cups & Trays</h4>
+            <p class="text-xs text-slate-400 mt-1">Direct branded cup sleeves and combo meal trays featuring coupon codes / QR links.</p>
+            <div class="mt-3 text-[11px] text-amber-400 font-semibold">Pricing: Per 1,000 cups distributed</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#151D2E] border border-slate-800">
+            <span class="text-2xl mb-2 block">🪧</span>
+            <h4 class="text-sm font-bold text-white">Lobby Standees & Digital</h4>
+            <p class="text-xs text-slate-400 mt-1">Entrance digital displays, illuminated standees, floor vinyls & box-office counter wraps.</p>
+            <div class="mt-3 text-[11px] text-amber-400 font-semibold">Pricing: Per unit / week</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: BRAND / ADVERTISER PORTAL WIREFRAME -->
+    <!-- ========================================================================= -->
+    <div id="tab-brand-portal" class="tab-content hidden space-y-6">
+      
+      <!-- Brand Portal Header Bar -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#0E1524] border border-[#1E293B] p-5 rounded-2xl">
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Brand Dashboard</span>
+            <span class="text-slate-600">/</span>
+            <span class="text-xs text-slate-300">Acme Fitness Brands</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white mt-1 font-display">Discover & Book Cinema Ad Spaces</h2>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="text-right hidden sm:block">
+            <div class="text-xs text-slate-400">Escrow Balance</div>
+            <div class="text-sm font-bold text-emerald-400">$12,450.00</div>
+          </div>
+          <button class="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-xl shadow transition">
+            + New Campaign
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Active Campaigns</div>
+          <div class="text-xl font-extrabold text-white mt-1">3 Running</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">Across 8 Multiplexes</div>
+        </div>
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Estimated Impressions</div>
+          <div class="text-xl font-extrabold text-amber-400 mt-1">142,500</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">92% verified in auditorium</div>
+        </div>
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Branded Popcorn Tubs Handed</div>
+          <div class="text-xl font-extrabold text-white mt-1">8,400</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">100% photo-verified</div>
+        </div>
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Proof-of-Execution</div>
+          <div class="text-xl font-extrabold text-emerald-400 mt-1">Audit Ready</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Photos & Projection logs OK</div>
+        </div>
+      </div>
+
+      <!-- Marketplace Filters & Search -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Left: Filters & Selection -->
+        <div class="space-y-4">
+          <div class="bg-[#0E1524] border border-slate-800 p-5 rounded-2xl">
+            <h3 class="text-sm font-bold text-white mb-3">Filter Cinema Inventory</h3>
+            
+            <div class="space-y-3 text-xs">
+              <div>
+                <label class="block text-slate-400 mb-1">Target City / Mall</label>
+                <select class="w-full bg-[#151D2E] border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500">
+                  <option>New York / Manhattan Hubs</option>
+                  <option>Los Angeles / Westwood</option>
+                  <option>Chicago / Downtown</option>
+                  <option>Mumbai / Suburban Hubs</option>
+                  <option>Delhi NCR / Gurugram</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-slate-400 mb-1">Desired Ad Formats</label>
+                <div class="space-y-2 pt-1">
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" checked class="rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0">
+                    <span class="text-slate-200">Interval Gold Spot (30s)</span>
+                  </label>
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" checked class="rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0">
+                    <span class="text-slate-200">Popcorn Bucket Custom Sleeves</span>
+                  </label>
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" class="rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0">
+                    <span class="text-slate-200">Lobby Standees / Digital Kiosks</span>
+                  </label>
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" class="rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0">
+                    <span class="text-slate-200">Seat Backrest Stickers</span>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-slate-400 mb-1">Campaign Duration</label>
+                <select class="w-full bg-[#151D2E] border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500">
+                  <option>1 Week (Blockbuster Opening Weekend)</option>
+                  <option selected>2 Weeks (Full Release Cycle)</option>
+                  <option>1 Month (Extended Branding)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Budget / Cart Card -->
+          <div class="bg-gradient-to-b from-[#162035] to-[#0E1524] border border-amber-500/30 p-5 rounded-2xl">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-amber-400 uppercase">Selected Package</span>
+              <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded">2 Formats</span>
+            </div>
+            <div class="mt-3 space-y-2 text-xs border-b border-slate-700 pb-3">
+              <div class="flex justify-between text-slate-300">
+                <span>Apex Cinema - Screen 1 (Interval 30s)</span>
+                <span class="font-semibold text-white">$650/wk</span>
+              </div>
+              <div class="flex justify-between text-slate-300">
+                <span>Popcorn Tubs (3,000 branded units)</span>
+                <span class="font-semibold text-white">$750</span>
+              </div>
+              <div class="flex justify-between text-slate-300">
+                <span>Cinemato Escrow Protection</span>
+                <span class="text-emerald-400 font-semibold">Included</span>
+              </div>
+            </div>
+            <div class="pt-3 flex justify-between items-baseline">
+              <span class="text-xs text-slate-400">Total Campaign Estimate:</span>
+              <span class="text-lg font-extrabold text-amber-400">$1,400</span>
+            </div>
+            <button class="w-full mt-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-xl shadow transition">
+              Upload Creatives & Book
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Cinema Listing Feed -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center justify-between text-xs text-slate-400 px-1">
+            <span>Showing 4 Verified Cinema Venues matching your criteria</span>
+            <span>Sorted by Footfall</span>
+          </div>
+
+          <!-- Cinema Card 1 -->
+          <div class="bg-[#0E1524] border border-slate-800 hover:border-amber-500/50 rounded-2xl p-5 transition group">
+            <div class="flex flex-col sm:flex-row justify-between gap-4">
+              <div class="flex gap-4">
+                <div class="w-20 h-20 rounded-xl bg-slate-800 flex-shrink-0 flex items-center justify-center text-3xl border border-slate-700">
+                  🍿
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h4 class="text-base font-bold text-white group-hover:text-amber-400 transition">Apex Grand Multiplex (Mall of Horizon)</h4>
+                    <span class="text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full">KYC Verified</span>
+                  </div>
+                  <p class="text-xs text-slate-400 mt-1">Sector 14 • 5 Audi Screens • 1,250 Total Seats</p>
+                  <div class="flex items-center gap-3 mt-2 text-xs">
+                    <span class="text-slate-300">Avg. Footfall: <strong class="text-white">38,000 / month</strong></span>
+                    <span class="text-slate-500">•</span>
+                    <span class="text-slate-300">Audience: <strong class="text-amber-400">Gen Z & Young Pros (18-35)</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-right sm:self-center">
+                <div class="text-[10px] text-slate-400">Starting From</div>
+                <div class="text-lg font-extrabold text-amber-400">$350<span class="text-xs text-slate-400 font-normal">/week</span></div>
+                <button class="mt-2 px-3 py-1.5 bg-[#1C263B] hover:bg-amber-500 hover:text-slate-950 text-slate-200 text-xs font-semibold rounded-lg transition">
+                  Customize Ad Slots
+                </button>
+              </div>
+            </div>
+
+            <!-- Ad format badges offered by this cinema -->
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap items-center gap-2">
+              <span class="text-[10px] text-slate-400">Available Formats:</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">Popcorn Buckets ($0.25/tub)</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">Interval 30s Video ($650/wk)</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">Lobby Cutouts ($180/wk)</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">3D Glasses Sticker ($0.15/ea)</span>
+            </div>
+          </div>
+
+          <!-- Cinema Card 2 -->
+          <div class="bg-[#0E1524] border border-slate-800 hover:border-amber-500/50 rounded-2xl p-5 transition group">
+            <div class="flex flex-col sm:flex-row justify-between gap-4">
+              <div class="flex gap-4">
+                <div class="w-20 h-20 rounded-xl bg-slate-800 flex-shrink-0 flex items-center justify-center text-3xl border border-slate-700">
+                  📽️
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h4 class="text-base font-bold text-white group-hover:text-amber-400 transition">Regal Palace Single-Screen Heritage</h4>
+                    <span class="text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full">KYC Verified</span>
+                  </div>
+                  <p class="text-xs text-slate-400 mt-1">Downtown Center • 1 Giant Screen • 820 Balcony Seats</p>
+                  <div class="flex items-center gap-3 mt-2 text-xs">
+                    <span class="text-slate-300">Avg. Footfall: <strong class="text-white">45,000 / month</strong></span>
+                    <span class="text-slate-500">•</span>
+                    <span class="text-slate-300">Audience: <strong class="text-amber-400">Families & Mass Audience</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-right sm:self-center">
+                <div class="text-[10px] text-slate-400">Starting From</div>
+                <div class="text-lg font-extrabold text-amber-400">$280<span class="text-xs text-slate-400 font-normal">/week</span></div>
+                <button class="mt-2 px-3 py-1.5 bg-[#1C263B] hover:bg-amber-500 hover:text-slate-950 text-slate-200 text-xs font-semibold rounded-lg transition">
+                  Customize Ad Slots
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap items-center gap-2">
+              <span class="text-[10px] text-slate-400">Available Formats:</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">Pre-Show Slide ($280/wk)</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">Popcorn Tub Branding ($0.20/tub)</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">Main Gate Archway ($300/wk)</span>
+            </div>
+          </div>
+
+          <!-- Proof of Performance Walkthrough for Brand -->
+          <div class="bg-[#121A2C] border border-slate-700/60 rounded-2xl p-5">
+            <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+              <span class="text-emerald-400">✓</span> Verified Proof-of-Execution System
+            </h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              When you book via Cinemato, your funds are safely locked in escrow. Cinema managers are required to upload <strong>geotagged & timestamped photos of your popcorn buckets at the snack counters</strong> and <strong>projector log sheets</strong> before their payment is released. You can audit everything from your dashboard in real-time.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 3: CINEMA HALL OWNER / MANAGER PORTAL WIREFRAME -->
+    <!-- ========================================================================= -->
+    <div id="tab-cinema-portal" class="tab-content hidden space-y-6">
+      
+      <!-- Cinema Manager Header Bar -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#0E1524] border border-[#1E293B] p-5 rounded-2xl">
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Cinema Partner Portal</span>
+            <span class="text-slate-600">/</span>
+            <span class="text-xs text-slate-300">Apex Grand Multiplex</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white mt-1 font-display">Manage Inventory & Custom Rates</h2>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="text-right">
+            <div class="text-xs text-slate-400">Available Payout</div>
+            <div class="text-sm font-bold text-emerald-400">$4,820.00</div>
+          </div>
+          <button class="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl shadow transition">
+            Withdraw to Bank
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Operational Stats -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Active Bookings</div>
+          <div class="text-xl font-extrabold text-white mt-1">4 Campaigns</div>
+          <div class="text-[10px] text-amber-400 mt-0.5">2 ending this Sunday</div>
+        </div>
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Pending Proof Upload</div>
+          <div class="text-xl font-extrabold text-amber-400 mt-1">1 Campaign</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Upload popcorn photos to unlock $750</div>
+        </div>
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Monthly Ad Revenue</div>
+          <div class="text-xl font-extrabold text-emerald-400 mt-1">$6,450.00</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">+42% vs offline brokers</div>
+        </div>
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Inventory Utilization</div>
+          <div class="text-xl font-extrabold text-white mt-1">78%</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Screen 3 interval is vacant</div>
+        </div>
+      </div>
+
+      <!-- Interactive Cinema Rate Card Builder -->
+      <div class="bg-[#0E1524] border border-[#1E293B] rounded-2xl p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 gap-2">
+          <div>
+            <h3 class="text-lg font-bold text-white font-display">Your Cinema Rate-Card & Inventory Switchboard</h3>
+            <p class="text-xs text-slate-400">Turn on/off the advertising services you want to offer and set your exact pricing.</p>
+          </div>
+          <span class="text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-lg">
+            ✓ Live on Cinemato Marketplace
+          </span>
+        </div>
+
+        <div class="mt-6 space-y-4">
+          
+          <!-- Service 1: Popcorn Buckets -->
+          <div class="p-4 rounded-xl bg-[#131B2C] border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start space-x-3">
+              <input type="checkbox" checked class="mt-1 rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0 w-4 h-4">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-sm font-bold text-white">🍿 Popcorn Bucket Custom Sleeve Ads</h4>
+                  <span class="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.2 rounded font-semibold">High Demand</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">You agree to serve popcorn in advertiser-branded tubs provided or printed per batch.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div>
+                <span class="text-[10px] text-slate-400 block">Your Price / 1,000 Tubs</span>
+                <input type="text" value="$250.00" class="w-28 bg-[#1B253B] border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white font-bold">
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-400 block">Min Batch Size</span>
+                <select class="bg-[#1B253B] border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+                  <option>3,000 Tubs</option>
+                  <option>5,000 Tubs</option>
+                  <option>10,000 Tubs</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2: Interval On-Screen Video -->
+          <div class="p-4 rounded-xl bg-[#131B2C] border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start space-x-3">
+              <input type="checkbox" checked class="mt-1 rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0 w-4 h-4">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-sm font-bold text-white">🎬 Interval Gold-Spot (30-second Video)</h4>
+                  <span class="text-[10px] bg-red-500/20 text-red-400 px-2 py-0.2 rounded font-semibold">Prime Slot</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">Played right at the beginning of interval before house lights turn full bright.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div>
+                <span class="text-[10px] text-slate-400 block">Price / Screen / Week</span>
+                <input type="text" value="$650.00" class="w-28 bg-[#1B253B] border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white font-bold">
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-400 block">Max Slots Allowed</span>
+                <select class="bg-[#1B253B] border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+                  <option>2 Spots Max</option>
+                  <option>4 Spots Max</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3: Pre-Show Slides / Videos -->
+          <div class="p-4 rounded-xl bg-[#131B2C] border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start space-x-3">
+              <input type="checkbox" checked class="mt-1 rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0 w-4 h-4">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-sm font-bold text-white">🎞️ Pre-Show Slide / Mute Video Reel</h4>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">Rotates continuously for 15 minutes before showtime as viewers find seats.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div>
+                <span class="text-[10px] text-slate-400 block">Price / Screen / Week</span>
+                <input type="text" value="$300.00" class="w-28 bg-[#1B253B] border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white font-bold">
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4: Lobby Standees & Booths -->
+          <div class="p-4 rounded-xl bg-[#131B2C] border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start space-x-3">
+              <input type="checkbox" checked class="mt-1 rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0 w-4 h-4">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-sm font-bold text-white">🪧 Main Concourse Lobby Standee Space</h4>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">Physical floor space near concession stand for 6x3 ft standee.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div>
+                <span class="text-[10px] text-slate-400 block">Price / Unit / Week</span>
+                <input type="text" value="$180.00" class="w-28 bg-[#1B253B] border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white font-bold">
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5: Seat Back Stickers -->
+          <div class="p-4 rounded-xl bg-[#131B2C] border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4 opacity-75">
+            <div class="flex items-start space-x-3">
+              <input type="checkbox" class="mt-1 rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0 w-4 h-4">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-sm font-bold text-white">🪑 Seat Backrest Decals / Stickers</h4>
+                  <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.2 rounded">Currently Disabled</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">High-repetition branding in front of every audience member.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div>
+                <span class="text-[10px] text-slate-400 block">Price / Audi / Month</span>
+                <input type="text" value="$800.00" disabled class="w-28 bg-[#151D2E] border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-slate-500 font-bold">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-6 flex justify-end">
+          <button class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-xl shadow transition">
+            Save Rate Card Updates
+          </button>
+        </div>
+      </div>
+
+      <!-- Proof of Execution Upload Center -->
+      <div class="bg-[#0E1524] border border-[#1E293B] rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-white font-display">Proof-of-Execution Submission</h3>
+        <p class="text-xs text-slate-400 mb-4">Upload verification proof to unlock completed campaign payouts held in escrow.</p>
+
+        <div class="p-4 rounded-xl bg-[#151D2E] border border-amber-500/30 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-white">Campaign #8492: Acme Nutrition - Popcorn Tubs (3,000 units)</span>
+              <span class="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded font-bold">Proof Needed</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">Please upload 3 photos showing printed buckets stocked on the counter and being served to patrons.</p>
+          </div>
+          <button class="px-4 py-2 bg-amber-500 text-slate-950 text-xs font-bold rounded-lg shadow hover:bg-amber-400">
+            📷 Upload Geotagged Photos
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 4: SUPER ADMIN PORTAL (CINEMATO OPS) WIREFRAME -->
+    <!-- ========================================================================= -->
+    <div id="tab-admin-portal" class="tab-content hidden space-y-6">
+      
+      <!-- Admin Header Bar -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#0E1524] border border-[#1E293B] p-5 rounded-2xl">
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="text-xs font-bold text-red-500 uppercase tracking-wider">Cinemato Master Ops Tower</span>
+            <span class="text-slate-600">/</span>
+            <span class="text-xs text-slate-300">Super Administrator</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white mt-1 font-display">Ecosystem Governance & Escrow</h2>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-xs text-slate-300">Platform Systems 100% Operational</span>
+        </div>
+      </div>
+
+      <!-- Admin Core Financials -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Monthly GMV</div>
+          <div class="text-xl font-extrabold text-white mt-1">$148,200.00</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">+28% this month</div>
+        </div>
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Cinemato Revenue (12.5% Avg)</div>
+          <div class="text-xl font-extrabold text-amber-400 mt-1">$18,525.00</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Platform commissions</div>
+        </div>
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Escrow Locked Funds</div>
+          <div class="text-xl font-extrabold text-white mt-1">$62,400.00</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Awaiting proof of execution</div>
+        </div>
+        <div class="bg-[#0E1524] border border-slate-800 p-4 rounded-xl">
+          <div class="text-xs text-slate-400">Onboarded Cinemas</div>
+          <div class="text-xl font-extrabold text-emerald-400 mt-1">184 Venues</div>
+          <div class="text-[10px] text-amber-400 mt-0.5">6 pending KYC approval</div>
+        </div>
+      </div>
+
+      <!-- Action Queues (The Workflows) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Queue 1: Creative Moderation -->
+        <div class="bg-[#0E1524] border border-slate-800 p-5 rounded-2xl">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+              Creative Moderation Queue (3 Pending)
+            </h3>
+            <span class="text-xs text-slate-400">QC & Censor check</span>
+          </div>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 bg-[#131B2C] border border-slate-700/60 rounded-xl flex items-center justify-between">
+              <div>
+                <p class="font-bold text-white">Tesla Motors - Model Y Interval (30s 4K)</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Target: 4 Multiplexes • Specs: DCP / 5.1 Audio • CBFC: Attached</p>
+              </div>
+              <div class="flex gap-1.5">
+                <button class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded font-semibold hover:bg-emerald-500 hover:text-slate-950">Approve</button>
+                <button class="px-2.5 py-1 bg-red-500/20 text-red-400 border border-red-500/30 rounded font-semibold hover:bg-red-500 hover:text-white">Reject</button>
+              </div>
+            </div>
+
+            <div class="p-3 bg-[#131B2C] border border-slate-700/60 rounded-xl flex items-center justify-between">
+              <div>
+                <p class="font-bold text-white">Spicy Crunch - Popcorn Bucket Wrap (Print PDF)</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Target: Regal Palace • Specs: 300 DPI CMYK • Bleed: OK</p>
+              </div>
+              <div class="flex gap-1.5">
+                <button class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded font-semibold hover:bg-emerald-500 hover:text-slate-950">Approve</button>
+                <button class="px-2.5 py-1 bg-red-500/20 text-red-400 border border-red-500/30 rounded font-semibold hover:bg-red-500 hover:text-white">Reject</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Queue 2: Proof & Escrow Payout Clearance -->
+        <div class="bg-[#0E1524] border border-slate-800 p-5 rounded-2xl">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              Proof-of-Execution Verification (2 Ready)
+            </h3>
+            <span class="text-xs text-slate-400">Release Payout</span>
+          </div>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 bg-[#131B2C] border border-slate-700/60 rounded-xl flex items-center justify-between">
+              <div>
+                <p class="font-bold text-white">Apex Grand Multiplex - Campaign #8410</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Uploaded 4 Geotagged Photos + Projection Log • Payout: $1,250</p>
+              </div>
+              <button class="px-3 py-1.5 bg-emerald-500 text-slate-950 font-bold rounded hover:bg-emerald-400">
+                Disburse Payout
+              </button>
+            </div>
+
+            <div class="p-3 bg-[#131B2C] border border-slate-700/60 rounded-xl flex items-center justify-between">
+              <div>
+                <p class="font-bold text-white">CineStar Downtown - Standee Deployment</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Uploaded Entrance Photo with Date Stamp • Payout: $350</p>
+              </div>
+              <button class="px-3 py-1.5 bg-emerald-500 text-slate-950 font-bold rounded hover:bg-emerald-400">
+                Disburse Payout
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 5: PUBLIC LANDING PAGE WIREFRAME -->
+    <!-- ========================================================================= -->
+    <div id="tab-landing-wireframe" class="tab-content hidden space-y-10">
+      
+      <!-- Hero Section -->
+      <div class="text-center max-w-3xl mx-auto pt-6 pb-4">
+        <span class="text-xs uppercase tracking-widest font-extrabold text-amber-400 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full">
+          The First Cinema Ad Exchange
+        </span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white mt-4 font-display tracking-tight leading-tight">
+          Where Brands Meet <br/><span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-amber-200 to-red-500">The Big Screen</span>
+        </h1>
+        <p class="text-slate-300 mt-4 text-base sm:text-lg">
+          Book captive on-screen commercials, custom popcorn bucket branding, and cinema lobby activations across hundreds of theatres with verified audit proof.
+        </p>
+
+        <!-- Search Bar Hero Widget -->
+        <div class="mt-8 bg-[#0E1524] border-2 border-amber-500/40 p-2 sm:p-3 rounded-2xl shadow-2xl flex flex-col sm:flex-row gap-2">
+          <input type="text" placeholder="Enter City (e.g. New York, Mumbai, Dallas)..." class="flex-1 bg-[#151D2E] border border-slate-700 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500">
+          <select class="bg-[#151D2E] border border-slate-700 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500">
+            <option>All Formats (Screen + Popcorn + Lobby)</option>
+            <option>Popcorn Buckets Only</option>
+            <option>Interval 30s Video Only</option>
+          </select>
+          <button class="px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-bold text-xs rounded-xl shadow-lg hover:from-amber-400 hover:to-amber-300 transition">
+            Search 500+ Cinemas
+          </button>
+        </div>
+      </div>
+
+      <!-- Two-Sided Value Proposition Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+        
+        <!-- For Brands -->
+        <div class="bg-gradient-to-br from-[#121A2C] to-[#0E1524] border border-slate-800 p-8 rounded-3xl relative overflow-hidden">
+          <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">For Brand Advertisers</div>
+          <h3 class="text-2xl font-bold text-white font-display mb-3">Reach 100% Attentive, Screen-Gazing Audiences</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-6">
+            No skip buttons, no ad-blockers, no background tabs. Reach captive moviegoers when their sensory focus is at its absolute peak.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Direct cinema rate-cards with zero broker inflation</li>
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Target by blockbuster movie, footfall tier, and geographic zip code</li>
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Geotagged photo and projection log verification before payout</li>
+          </ul>
+          <button class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-xl shadow transition">
+            Explore Ad Spaces →
+          </button>
+        </div>
+
+        <!-- For Cinema Owners -->
+        <div class="bg-gradient-to-br from-[#121A2C] to-[#0E1524] border border-slate-800 p-8 rounded-3xl relative overflow-hidden">
+          <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">For Cinema Owners & Managers</div>
+          <h3 class="text-2xl font-bold text-white font-display mb-3">Turn Idle Popcorn Tubs & Intervals into Pure Profit</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-6">
+            Stop waiting for slow traditional agencies. List your screens and snack counter inventory in 5 minutes and receive pre-paid booking requests from national brands.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> You set your own prices for popcorn tubs, screens, and standees</li>
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Accept or decline any booking request with one click</li>
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Guaranteed prompt payouts directly to your bank account</li>
+          </ul>
+          <button class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl shadow transition">
+            List Your Cinema Hall →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Interactive Script for Tab Switching -->
+  <script>
+    function switchTab(tabKey) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      // Deselect all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-amber-500', 'text-slate-950', 'shadow');
+        btn.classList.add('text-slate-300');
+      });
+
+      // Show selected tab
+      const targetTab = document.getElementById('tab-' + tabKey);
+      if (targetTab) {
+        targetTab.classList.remove('hidden');
+      }
+
+      // Highlight active button
+      const activeBtn = document.getElementById('tab-btn-' + tabKey);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-slate-300');
+        activeBtn.classList.add('bg-amber-500', 'text-slate-950', 'shadow');
+      }
+    }
+  </script>
+</body>
+</html>

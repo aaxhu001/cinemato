@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Circle container -->
+  <rect width="100" height="100" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <g transform="translate(50, 46)">
+    <!-- Outer Reel Rim -->
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#0A0E1A" stroke-width="6"/>
+    <!-- Outer Rim Track -->
+    <circle cx="0" cy="0" r="26" fill="none" stroke="#0A0E1A" stroke-width="1.5"/>
+    <!-- Central Hub -->
+    <circle cx="0" cy="0" r="10" fill="#0A0E1A"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+    <!-- 5 Radial Spool Drive Holes -->
+    <circle cx="0" cy="-17" r="4.5" fill="#0A0E1A"/>
+    <circle cx="16" cy="-5" r="4.5" fill="#0A0E1A"/>
+    <circle cx="10" cy="14" r="4.5" fill="#0A0E1A"/>
+    <circle cx="-10" cy="14" r="4.5" fill="#0A0E1A"/>
+    <circle cx="-16" cy="-5" r="4.5" fill="#0A0E1A"/>
+  </g>
+
+  <!-- Flowing ribbon at bottom -->
+  <path d="M 50 78 C 35 84, 20 76, 12 85" fill="none" stroke="#0A0E1A" stroke-width="3.5" stroke-linecap="round"/>
+</svg>
