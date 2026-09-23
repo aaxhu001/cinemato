@@ -1,45 +1,76 @@
-# Cinemato — Cinema Advertising Marketplace
+# 🎬 Cinemato — Cinema Advertising Marketplace
 
 > **"Where Brands Meet The Big Screen"**  
-> An automated, escrow-protected advertising exchange connecting Cinema Hall Owners/Managers with Brand Advertisers.
+> An automated, escrow-protected advertising exchange connecting **Cinema Hall Owners/Managers** with **Brand Advertisers & Local Businesses**.
 
 ---
 
-## 📁 Project Architecture & Planning Deliverables
+## 🌐 Live Demo & Instant Access
 
+- **Public Live URL (Active Tunnel):** [https://d2b625d76311ad.lhr.life](https://d2b625d76311ad.lhr.life)
+- **One-Click Deploy to Vercel:**  
+  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/aaxhu001/cinemato)
+
+---
+
+## 🏛 The Three Sides of the Platform
+
+### 1. Public Marketplace & Face of Cinemato (`/`)
+- **Direct Link:** [https://d2b625d76311ad.lhr.life/](https://d2b625d76311ad.lhr.life/)
+- **Features:** 
+  - Dynamic hero search by city (Mumbai, Delhi, Bengaluru, etc.) and cinema format (IMAX, 4DX, Dolby Atmos).
+  - Interactive **Reach & ROI Calculator** showing estimated footfall and CPM comparisons.
+  - Ad format showroom (Popcorn Tubs, On-screen 30s Intervals, Lobby Standees, Washroom Mirrors).
+  - Quick role switchers to enter as a Cinema Owner or Brand Advertiser.
+
+### 2. Cinema Owners' & Managers' Portal (`/cinema`)
+- **Dashboard:** [https://d2b625d76311ad.lhr.life/cinema/dashboard](https://d2b625d76311ad.lhr.life/cinema/dashboard)
+- **Rate-Card Switchboard:** [https://d2b625d76311ad.lhr.life/cinema/rate-card](https://d2b625d76311ad.lhr.life/cinema/rate-card)
+  - Configure per-tub popcorn bucket pricing (e.g. ₹18 / 1k tubs).
+  - On-screen interval video rates (e.g. ₹45,000 / week).
+  - Enable weekend surge pricing multiplier (+25%).
+- **Booking Intake & Creative Approvals:** [https://d2b625d76311ad.lhr.life/cinema/bookings](https://d2b625d76311ad.lhr.life/cinema/bookings)
+- **Proof-of-Execution Station:** [https://d2b625d76311ad.lhr.life/cinema/proofs](https://d2b625d76311ad.lhr.life/cinema/proofs)
+  - Upload geotagged/timestamped photos of popcorn tubs and projection logs to release escrow funds.
+- **Payouts & Escrow Balance:** [https://d2b625d76311ad.lhr.life/cinema/payouts](https://d2b625d76311ad.lhr.life/cinema/payouts)
+
+### 3. Business & Brand Owners' Portal (`/brand`)
+- **Campaign Dashboard:** [https://d2b625d76311ad.lhr.life/brand/dashboard](https://d2b625d76311ad.lhr.life/brand/dashboard)
+- **Cinema Discovery Marketplace:** [https://d2b625d76311ad.lhr.life/brand/explore](https://d2b625d76311ad.lhr.life/brand/explore)
+  - Real-time rate cards reflecting cinema owner configurations.
+- **Custom Package Configurator & Escrow Checkout:** [https://d2b625d76311ad.lhr.life/brand/checkout](https://d2b625d76311ad.lhr.life/brand/checkout)
+  - 100% upfront escrow locking simulation.
+- **Verified Campaign Audit Gallery:** [https://d2b625d76311ad.lhr.life/brand/audit](https://d2b625d76311ad.lhr.life/brand/audit)
+  - Review photo evidence and projection certificates before final clearance.
+
+---
+
+## 🎨 Official Branding System
+
+- **Official Brand Mark:** Hand-drawn sketch typography faithfully digitized in high-contrast **Black on White** (`#0A0E1A` on `#FFFFFF`).
+  - Custom filmstrip perforations in the letter **`I`**.
+  - Continuous unspooling 35mm film ribbon flowing underneath the logotype.
+  - Vintage cinematic 6-spoke projector reel for the letter **`O`**.
+- Vector source files:
+  - [`branding/cinemato-logo-black-on-white.svg`](branding/cinemato-logo-black-on-white.svg)
+  - [`branding/cinemato-reel-symbol.svg`](branding/cinemato-reel-symbol.svg)
+  - [`branding/CLAUDE_BRAND_GUIDELINES.md`](branding/CLAUDE_BRAND_GUIDELINES.md)
+  - [`wireframes/CLAUDE_WEBSITE_WIREFRAME_GUIDELINES.md`](wireframes/CLAUDE_WEBSITE_WIREFRAME_GUIDELINES.md)
+
+---
+
+## 💻 Tech Stack & Local Setup
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS + Lucide Icons
+- **State Management:** Reactive React Context (`MarketplaceContext`) keeping Cinema Owner inventory and Brand bookings in sync in real time.
+
+### Run Locally:
+```bash
+git clone https://github.com/aaxhu001/cinemato.git
+cd cinemato
+npm install
+npm run dev
 ```
-cinemato/
-├── branding/
-│   ├── BRAND_GUIDELINES.md             # Complete brand identity bible & design system
-│   ├── cinemato-logo-aperture.svg       # Master vector emblem (The Golden Projector Aperture)
-│   └── cinemato-brand-lockup.svg       # Horizontal brand mark with typography
-│
-├── wireframes/
-│   ├── WIREFRAMES.md                   # Screen-by-screen UX specifications for all 4 spaces
-│   ├── INVENTORY_SPECIFICATIONS.md     # Popcorn bucket die-lines, video aspect ratios, & audio specs
-│   ├── PLATFORM_WORKFLOWS.md           # Escrow trust lifecycle, state machine, and DB models
-│   └── interactive_prototype.html      # Self-contained visualizer & clickable prototype
-│
-└── README.md                           # Master project guide
-```
-
----
-
-## 🚀 Interactive Wireframe & Brand Prototype
-
-You can immediately open and preview the complete interactive prototype by launching `wireframes/interactive_prototype.html` in your web browser:
-
-- **🎨 Brand Identity & Logo Showcase:** Visual colors, logo explorations, taglines, and brand voice.
-- **🏢 Brand / Advertiser Portal:** Cinema search, dynamic ad-space configurator, cart, and proof tracker.
-- **🍿 Cinema Hall Owner Portal:** Service switchboard, rate-card builder, booking requests, and proof uploader.
-- **⚡ Super Admin Control Tower:** GMV analytics, creative moderation queue, and escrow payouts.
-- **🌐 Public Landing Page:** High-converting hero search, format showroom, and value propositions.
-
----
-
-## 🛠 Next Phase: Production Implementation
-Once the branding and wireframe specifications are aligned, the tech stack roadmap:
-* **Frontend:** Next.js (App Router), Tailwind CSS, Lucide Icons, Framer Motion
-* **Backend / Database:** Supabase / PostgreSQL (Prisma ORM)
-* **Storage:** S3-compatible cloud storage for heavy video DCPs & high-res print PDFs
-* **Auth & Permissions:** Multi-role RBAC (Super Admin, Cinema Manager, Brand Advertiser)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
